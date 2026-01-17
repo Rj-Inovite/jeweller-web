@@ -1,0 +1,262 @@
+/* --- Variables & Theme --- */
+:root {
+  --gold-primary: #D4AF37;
+  --gold-light: #F3E5AB;
+  --gold-dark: #AA8C2C;
+  --pink-bg: #FFF0F5; /* Lavender Blush */
+  --pink-card: rgba(255, 255, 255, 0.85);
+  --text-dark: #4A3B32;
+  --text-light: #8C8C8C;
+  --shadow: 0 8px 32px 0 rgba(212, 175, 55, 0.15);
+}
+
+/* --- Base Layout --- */
+.contact-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF0F5 0%, #FFFDF5 100%);
+  font-family: 'Playfair Display', serif; /* Ensure you import a serif font or rely on system serif */
+  position: relative;
+  overflow-x: hidden;
+  color: var(--text-dark);
+  padding: 40px 20px;
+}
+
+/* --- Decorative Background Shapes --- */
+.deco-shape {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  border: 2px solid var(--gold-light);
+  top: -50px;
+  left: -50px;
+  opacity: 0.4;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--gold-light) 0%, transparent 70%);
+  bottom: 50px;
+  right: -50px;
+  opacity: 0.3;
+}
+
+/* --- Header --- */
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.brand-name {
+  font-size: 4rem;
+  color: var(--gold-primary);
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 1);
+}
+
+.brand-tagline {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-top: 10px;
+  font-style: italic;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* --- Grid Layout --- */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+  .brand-name {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- Glass Panels (Cards) --- */
+.glass-panel {
+  background: var(--pink-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+}
+
+.glass-panel h3 {
+  color: var(--gold-primary);
+  border-bottom: 1px solid var(--gold-light);
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* --- Contact Info --- */
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.icon-gold {
+  color: var(--gold-primary);
+  margin-right: 15px;
+  min-width: 24px;
+}
+
+/* --- FAQ Section --- */
+.faq-item {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+}
+
+.faq-answer {
+  overflow: hidden;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding-bottom: 15px;
+}
+
+/* --- Forms --- */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold-dark);
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--gold-light);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.btn-gold {
+  background: linear-gradient(45deg, var(--gold-primary), var(--gold-dark));
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* --- Success States --- */
+.success-state, .thank-you-msg {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: var(--gold-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.success-state h4, .thank-you-msg h3 {
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--gold-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* --- Rating Stars --- */
+.rating-ui {
+  text-align: center;
+}
+
+.stars-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.star-icon {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.star-icon:hover {
+  transform: scale(1.2);
+}
+
+.small-text {
+  font-size: 0.8rem;
+  color: #999;
+}

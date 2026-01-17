@@ -1,0 +1,156 @@
+/* --- Variables (Consistent with your theme) --- */
+:root {
+  --gold-primary: #D4AF37;
+  --gold-hover: #AA8C2C;
+  --text-dark: #1a1a1a;
+  --text-gray: #666666;
+  --white: #ffffff;
+  --font-serif: 'Playfair Display', serif;
+}
+
+/* --- Main Container --- */
+.footer-container {
+  background-color: var(--white);
+  border-top: 1px solid rgba(212, 175, 55, 0.3); /* Subtle gold border at top */
+  padding: 80px 20px 30px;
+  text-align: center;
+  font-family: var(--font-serif);
+  position: relative;
+  color: var(--text-dark);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* --- Brand Styling --- */
+.brand-title {
+  font-size: 2.5rem;
+  color: var(--gold-primary);
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.gold-divider-small {
+  width: 40px;
+  height: 2px;
+  background-color: var(--gold-primary);
+  margin: 15px auto;
+}
+
+.brand-tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-gray);
+  letter-spacing: 0.5px;
+}
+
+/* --- Chat Button Styling --- */
+.chat-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+  padding: 12px 35px;
+  font-size: 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.chat-button:hover {
+  background-color: var(--gold-primary);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.chat-helper-text {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* --- Links & Socials --- */
+.footer-links-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-link {
+  color: var(--text-dark);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--gold-primary);
+  transform: scale(1.1);
+}
+
+.policy-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.policy-links a {
+  text-decoration: none;
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.policy-links a:hover {
+  color: var(--gold-primary);
+}
+
+.separator {
+  color: var(--gold-primary);
+}
+
+/* --- Bottom Copyright --- */
+.footer-bottom {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footer-links-row {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .brand-title {
+    font-size: 2rem;
+  }
+}
