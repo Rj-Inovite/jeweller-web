@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, X, ZoomIn, ShoppingBag } from 'lucide-react';
-import './Shop.css';
+import './shop.css';
 
 // --- MOCK DATA GENERATOR ---
 const generateProducts = () => {

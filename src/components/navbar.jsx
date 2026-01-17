@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, ShoppingBag, Menu, X } from 'lucide-react';
-import './Navbar.css';
+import './navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Facebook, Instagram, Twitter } from 'lucide-react';
-import './Footer.css';
+import './footer.css';
 
 const Footer = () => {
   // Replace this with your actual WhatsApp number (International format without +)

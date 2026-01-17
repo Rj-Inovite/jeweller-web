@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { gsap } from 'gsap';
 import { MapPin, Phone, Clock, Star, Send, ChevronDown, ChevronUp } from 'lucide-react';
-import './Contact.css';
+import './contact.css';
 
 const Contact = () => {
   // --- State Management ---

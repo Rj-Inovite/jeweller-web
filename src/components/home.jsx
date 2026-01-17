@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import './Home.css';
+import './home.css';
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
